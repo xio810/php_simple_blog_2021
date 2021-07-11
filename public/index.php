@@ -1,23 +1,16 @@
 <?php
-$article1 = [
-    "id" => "1",
-    "regDate" => "2021-06-12 03:32:52",
-    "title" => "제목1",
-    "body" => "내용1"
-];
 
-$article2 = [
-    "id" => "2",
-    "regDate" => "2021-06-12 03:32:52",
-    "title" => "제목2",
-    "body" => "내용2"
-];
+namespace App;
 
-$articles = [];
+require_once __DIR__ . "/../vendor/autoload.php";
 
-$articles[] = $article1
-$articles[] = $article2
+// 어플리케이션
+$application = Application::getInstance();
 
-print_r($articles);
-exit;
-// echo -> 출력
+date_default_timezone_set('Asia/Seoul');
+session_start();
+
+// 현재 환경이 개발 혹은 운영인지에 따라
+$dbConn = $application->getDbConnectionByEnv();
+
+$application->runByRequestUri($_SERVER['REQUEST_URI']);
