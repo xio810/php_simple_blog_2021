@@ -5,8 +5,8 @@ $meta['pageGenDate'] = $updateDateBits[0] . 'T' . $updateDateBits[1] . 'Z';
 $meta['siteSubject'] = str_replace('"', '＂', $article['title']);
 $meta['siteDescription'] = str_replace('"', '＂', mb_substr($article['body'], 0, 100));
 $meta['siteDescription'] = str_replace("\n", "", $meta['siteDescription']);
-$pageTitleIcon = '<i class="fas fa-newspaper"></i>';
-$pageTitle = "게시물 상세내용, ${id}번 게시물";
+$pageTitleIcon = '<i class="fas fa-ellipsis-v"></i>';
+$pageTitle = ".${id}";
 
 $body = ToastUiEditor__getSafeSource($article['body']);
 

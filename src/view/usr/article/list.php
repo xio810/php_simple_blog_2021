@@ -1,6 +1,6 @@
 <?php
 $pageTitleIcon = '<i class="fas fa-list"></i>';
-$pageTitle = "최신 게시물 리스트";
+$pageTitle = "meke";
 ?>
 <?php require_once __DIR__ . "/../head.php"; ?>
 <?php require_once __DIR__ . "/../../part/toastUiSetup.php"; ?>
@@ -21,7 +21,7 @@ $pageTitle = "최신 게시물 리스트";
     <div class="con-pad">
 
       <div>
-        <div class="badge bg-base-300 badge-ghost ">게시물 수</div>
+        <div class="badge bg-base-300 badge-ghost bg-custom">게시물 수</div>
         <?=$totalCount?>
       </div>
 
@@ -35,23 +35,23 @@ $pageTitle = "최신 게시물 리스트";
             $body = ToastUiEditor__getSafeSource($article['body']);
             ?>
             <div>
-              <div class="badge bg-base-300 badge-ghost">번호</div>
+              <div class="badge bg-base-300 badge-ghost bg-custom">번호</div>
               <a href="<?=$detailUri?>"><?=$article['id']?></a>
             </div>
             <div class="mt-2">
-              <div class="badge bg-base-300 badge-ghost">제목</div>
+              <div class="badge bg-base-300 badge-ghost bg-custom">제목</div>
               <a href="<?=$detailUri?>"><?=$article['title']?></a>
             </div>
             <div class="mt-2">
-              <div class="badge bg-base-300 badge-ghost">작성자</div>
+              <div class="badge bg-base-300 badge-ghost bg-custom">작성자</div>
               <?=$article['extra__writerName']?>
             </div>
             <div class="mt-2">
-              <div class="badge bg-base-300 badge-ghost">작성날짜</div>
+              <div class="badge bg-base-300 badge-ghost bg-custom">작성날짜</div>
               <?=$article['regDate']?>
             </div>
             <div class="mt-2">
-              <div class="badge bg-base-300 badge-ghost">수정날짜</div>
+              <div class="badge bg-base-300 badge-ghost bg-custom">수정날짜</div>
               <?=$article['updateDate']?>
             </div>
             <div class="mt-2">

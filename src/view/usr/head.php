@@ -18,6 +18,7 @@ $loginedMember = $_REQUEST['App__loginedMember'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $pageTitle ?></title>
 
+
     <!-- 제이쿼리 불러오기 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
@@ -30,6 +31,20 @@ $loginedMember = $_REQUEST['App__loginedMember'];
     <link href="https://cdn.jsdelivr.net/npm/daisyui@1.3.2/dist/full.css" rel="stylesheet" type="text/css"/>
 
     <link rel="stylesheet" href="/resource/common.css">
+
+    <style type="text/css">
+    a:hover, a:focus { animation-duration: 3s; animation-name: rainbowLink; animation-iteration-count: infinite; }
+@keyframes rainbowLink {
+0% { color: #ff2a2a; }
+15% { color: #ff7a2a; }
+30% { color: #ffc52a; }
+45% { color: #43ff2a; }
+60% { color: #2a89ff; }
+75% { color: #202082; }
+90% { color: #6b2aff; }
+100% { color: #e82aff; }
+}
+    </style>
 
     <?php if ($envCode == 'prod') { ?>
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -57,7 +72,7 @@ $loginedMember = $_REQUEST['App__loginedMember'];
         <div class="container mx-auto h-full flex">
             <a href="/" class="top-bar__logo px-5 flex items-center">
                 <span><i class="fas fa-paw"></i></span>
-                <span class="ml-2 font-bold hidden sm:inline meke">MEKE! MEKE! </span>
+                <span class="ml-2 font-bold hidden sm:inline meke meke-head">MEKE! MEKE! </span>
                 <span><i class="ml-2 fas fa-paw"></i></span>
             </a>
 
@@ -66,9 +81,9 @@ $loginedMember = $_REQUEST['App__loginedMember'];
             <nav class="menu-box-1">
                 <ul class="flex h-full">
                     <li class="hover:bg-white hover:text-black">
-                        <a href="/" class="h-full flex items-center px-5">
-                            <span><i class="fas fa-home"></i></span>
-                            <span class="ml-2 font-bold hidden sm:inline">HOME</span>
+                        <a href="/usr/home/aboutMe" class="h-full flex items-center px-5">
+                            <span><i class="fas fa-cat"></i></span>
+                            <span class="ml-2 font-bold hidden sm:inline">INFO</span>
                         </a>
                     </li>
                     <li class="hover:bg-white hover:text-black">
